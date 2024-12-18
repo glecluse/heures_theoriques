@@ -44,6 +44,6 @@ data_to_predict = np.array([[
 if st.button("Calcul du nombre d'heures théorique"):
     dmatrix = xgb.DMatrix(data_to_predict)
     predicted_value = xgb_model.predict(dmatrix)
-    st.subheader(f"En fonction des caractéristiques renseignées, le dossier devrait représenter une charge de travail de {predicted_value[0]:.2f} heures")
+    st.subheader(f"En fonction des caractéristiques renseignées, le dossier devrait représenter une charge de travail de {predicted_value[0]:.2f} heures en moyenne par mois")
 
 st.write("---")
